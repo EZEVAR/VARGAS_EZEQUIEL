@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+    <h1> </h1>
+    <script type="text/javascript">
+var verdadero, char;
+var valores = [verdadero, false, 2, "hola","mundo",3,char];
+var ListaString=[];
+var ListaNumeros=[];
+for (let i=0; i<valores.length; i++) {
+    if (typeof valores[i]==="string") {
+        ListaString.push(valores[i]);
+    }
+}
+Mayor=0;
+PalabraMayor=0;
+for (let i=0; i<ListaString.length; i++) {
+    if (ListaString[i].length>Mayor){
+        PalabraMayor=ListaString[i];
+        Mayor=ListaString[i].length;
+    }
+}
+for (let i=0; i<valores.length; i++){
+    if (typeof valores[i]==="number"){
+        ListaNumeros.push(valores[i])
+    }
+}
+sumarNumeros=ListaNumeros[0]+ListaNumeros[1];
+
+dividoNumeros=ListaNumeros[0]/ListaNumeros[1];
+
+porNumeros=ListaNumeros[0]*ListaNumeros[1];
+
+restaNumeros=ListaNumeros[0]-ListaNumeros[1];
+
+document.write ("La palabra con más letras es: "+PalabraMayor+"<br>");
+document.write ("Imprimir los elementos de menor a mayor: "+"<br>"+ListaString.sort (function(a,b){return a.length - b.length})+"<br>");
+document.write ("La suma de los números en es: " +sumarNumeros+"<br>");
+document.write ("La division de los números  es: " +dividoNumeros+"<br>");
+document.write ("La multiplicacion de los números  es: " +porNumeros+"<br>");
+document.write ("La resta de los números  es: " +restaNumeros+"<br>");
+    </script>
+    </body>
+</html>
