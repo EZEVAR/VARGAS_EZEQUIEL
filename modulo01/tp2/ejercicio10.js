@@ -4,6 +4,7 @@ function mostrarMensaje1() {
     if (mes =="") { alert ("NO HAZ INTRODUCIDO EL MES"); }
     mes = Number(mes);
             switch (mes) {
+                case 1: alert ("ENERO TIENE 31 DÍAS");
                 break;
                 case 2: alert ("FEBRERO TIENE 28 DÍAS");
                 break;
