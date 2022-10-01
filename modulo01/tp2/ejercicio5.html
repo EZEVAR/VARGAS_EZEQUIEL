@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<script>
+
+var palabra=prompt("ingrese la palabra deseada:");
+function letras(palabra) {
+
+  if (palabra === palabra.toLowerCase()) {
+    alert('La palabra esta compuesta de minusculas');
+    document.write('La palabra esta compuesta de minusculas');
+  }
+
+  else if (palabra === palabra.toUpperCase()) {
+    alert('la palabra esta compuesta de mayusculas.');
+    document.write('La palabra esta compuesta de mayusculas');
+  } else {
+    alert('la palabra esta compuesta de mayusculas y minusculas');
+    document.write('La palabra esta compuesta de mayusculas y minusculas')
+  }
+}
+console.log(letras(palabra))
+document.write("La palabra ingresada fue : ", palabra )
+</script>
+  </body>
+</html>
