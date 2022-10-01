@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+let num1=0;
+let num2=0;
+num1 = num1 + 3;
+num2 = num2 + 7;
+alert (`El primer numero ahora es ${num1} `);
+alert (`El segundo numero ahora es ${num2} ` );
+</script>
+</body>
+</html>
