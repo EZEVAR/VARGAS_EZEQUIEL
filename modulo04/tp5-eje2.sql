@@ -62,9 +62,9 @@ SELECT c.id,upper(concat_ws(' ,',c.apellido,c.nombre)) CLIENTE FROM clientes C l
 SELECT v.id,upper(concat_ws(' ,',v.apellido,v.nombre)) VENDEDOR FROM vendedores v   left join pedidos p ON v.id = p.id_vendedor where v.id=p.id_vendedor  is null;
 
 -- 22.Devuelve un listado con los clientes que no han realizado ningún pedido y de los vendedores que no han participado en ningún pedido. Ordene el listado alfabéticamente por el apellido y el nombre. En el listado deberá diferenciar de algún modo los clientes y los vendedores.
-select c.id ,upper(concat_ws(' ,',c.apellido,c.nombre)) NOMBRE from clientes C left join pedidos P ON C.id = P.id_cliente where p.id_cliente is null 
+select 'CLIENTE', c.id ,upper(concat_ws(' ,',c.apellido,c.nombre)) NOMBRE from clientes C left join pedidos P ON C.id = P.id_cliente where p.id_cliente is null 
 union 
-select distinct  v.id ,upper(concat_ws(' ,',v.apellido,v.nombre)) FROM vendedores v left join pedidos p ON v.id = p.id_vendedor  where p.id_vendedor is null ;
+select distinct 'VENDEDOR', v.id ,upper(concat_ws(' ,',v.apellido,v.nombre)) FROM vendedores v left join pedidos p ON v.id = p.id_vendedor  where p.id_vendedor is null ;
 
 -- 23.Calcula la cantidad total que suman todos los pedidos que aparecen en la tabla pedido.
 select sum(cantidad) TOTAL_VENTAS from pedidos ;
